@@ -1,0 +1,24 @@
+#wrap { 
+    overflow:auto; 
+}
+#div1{
+    background:yellow; 
+    width:70%; 
+    float:left;      
+}
+#div2{ 
+    background:red; 
+    width:35%; 
+    float:left; 
+    clear:left; 
+}
+#div3{ 
+    background:green;
+    width:35%; 
+    float:left;  
+}
+#div4{ 
+    background:blue; 
+    width:30%; 
+    float:right; 
+}

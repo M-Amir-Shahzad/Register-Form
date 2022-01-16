@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <script type="text/javascript">
+        function validate() {
+            if (document.myForm.Name.value == "") {
+                alert("Pleaase Enter your Name");
+                document.myForm.Name.focus();
+                return false;
+            }
+            if (document.myForm.Email.value == "") {
+                alert("Pleaase Enter your Email");
+                document.myForm.Name.focus();
+                return false;
+            }
+            if (document.myForm.Gender.value == "") {
+                alert("Pleaase select your Gender");
+                document.myForm.Name.focus();
+                return false;
+            }
+            if (document.myForm.Marks.value == "") {
+                alert("Pleaase Enter your Marks");
+                document.myForm.Name.focus();
+                return false;
+            }
+            if (document.myForm.subjects.value == "-1") {
+                alert("Pleaase Enter your subjects");
+                document.myForm.Name.focus();
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<center>
+<body>
+    <form name="myForm" onsubmit="return(validate());">
+        <table>
+            <tr>
+                <td style="font-size:30px; font-family: Algerian;">Admission Form</td>
+            </tr>
+            <tr>
+                <td>Enter First Name</td>
+                <td>Enter Last Name</td>
+            </tr>
+            <tr>
+                <td><input type="text" name="Name" placeholder="ABC"></td><br>
+                <td><input type="text" name="Last Name" placeholder="Optional"></td>
+            </tr>
+            <tr>
+                <td> Email </td>
+            </tr>
+            <tr>
+                <td><input type="text" name="Email" placeholder="abc@123.com"></td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="radio" name="Gender" value="M" checked />Male
+                    <input type="radio" name="Gender" value="F" checked/>Female
+                </td>
+            </tr>
+            <tr>
+                <td> Enter your Fsc Marks </td>
+            </tr>
+            <tr>
+                <td><input type="text" name="Marks"></td>
+            </tr>
+            <tr>
+                <td> Country </td>
+            </tr>
+            <tr>
+                <td><input type="text" name="Country"></td>
+            </tr>
+            <tr>
+                <td>choose your subjects</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="subjects" value="-1"><select name="subjects">
+                        <option value="-1">[choose yours]</option>
+                        <option value="1"> BSCS</option>
+                        <option value="2">BSIT</option>
+                        <option value="3">BSSE</option>
+                        <option value="4">BBA</option>
+                        <option value="5">BS.MATH</option>
+                        <option value="6">BS.ENGLISH</option>
+                    </select></td>
+            </tr>
+            <tr>
+                <td><input type="Submit" value="Submit"></td>
+                <td><input type="reset" value="Reset"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</center>
+</html>

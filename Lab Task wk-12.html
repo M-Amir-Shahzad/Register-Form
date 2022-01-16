@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>javascript: calculate two numbers</title>
+    <meta charset="windows-1252">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script>
+
+        function calc(oper) {
+            var n1 = parseFloat(document.getElementById('n1').value);
+            var n2 = parseFloat(document.getElementById('n2').value);
+            var n3 = parseFloat(document.getElementById('result').value);
+
+            if (oper == 'add') {
+                document.write("Sum " + (n1 + n2));
+            }
+
+            if (oper == 'sub') {
+                document.write("Sub " + (n1 - n2));
+            }
+
+            if (oper === 'tan') {
+                document.write('result').value = Math.tan(n1);
+            }
+
+            if (oper === 'sqrt') {
+                document.getElementById('result').value = Math.sqrt(n1);
+            }
+            if (oper === 'square') {
+                document.getElementById('result').value = n1 * n1;
+            }
+            if (oper === 'double') {
+                document.getElementById('result').value = n1 * 2;
+            }
+        }
+        function reset() {
+            document.getElementById('result').value = ''
+            document.write('n1').value = ''
+            document.write('n2').value = ''
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <label>Enter Number:</label>
+    <input type="text" id="n1" />
+    <input type="text" id="n2" />
+    <label>Result:</label><input type="text" id="result" /><br /><br />
+
+    <button id="add" onclick="add"> Add</button>&nbsp;&nbsp;&nbsp;&emsp;
+    <button id="cos" onclick="calc('cos')"> Cos</button>&nbsp;&nbsp;&nbsp;&nbsp;
+    <button id="tan" onclick="calc('tan')"> Tan</button>&nbsp;&nbsp;&nbsp;&nbsp;<br><br>
+    <button id="sqrt" onclick="calc('sqrt')"> Square Root</button>&nbsp;&nbsp;&nbsp;&nbsp;
+    <button id="square" onclick="calc('square')"> Square</button>&nbsp;&nbsp;&nbsp;&nbsp;
+    <button id="double" onclick="calc('double')"> Double</button><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button onclick="reset()">Reset</button </body>
+
+</html>
